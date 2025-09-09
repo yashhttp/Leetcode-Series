@@ -1,12 +1,12 @@
 📘 LeetCode Series
 
 Welcome to my LeetCode Series Repository 🚀
-This repo contains my solutions to various LeetCode problems.
-I first solve the problem directly on LeetCode platform, and then push the solutions here for revision, practice, and sharing with others.
+1. This repo contains my solutions to various LeetCode problems.
+2. I first solve the problem directly on LeetCode platform, and then push the solutions here for revision, practice, and sharing with others.
 
 💻 Languages Used
-C++ (primary)
-Future: may add Python/Java solutions
+1. C++ (primary)
+2. Future: may add Python/Java solutions
 
 📑 Problem-Solving Approach
 I solve problems on LeetCode editor first.
