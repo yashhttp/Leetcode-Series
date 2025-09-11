@@ -105,6 +105,16 @@ public:
         //         return num;
         //     }
         // }return -1;
-        
+
+
+        //It is Optimized Solution (Boyer–Moore Voting Algorithm)
+        int cand = 0;
+        int count = 0;
+        for(int num : nums){
+            if(count == 0) cand = num;
+            count += (num == cand) ? 1 : -1;
+
+        }
+        return cand;
     }
 };
