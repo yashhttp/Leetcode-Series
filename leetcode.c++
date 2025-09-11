@@ -90,3 +90,21 @@ public:
         
     }
 };
+
+
+LEETCODE QUESTION - MAJORITY ELEMENT
+    class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        //hashing take O(n) space complexity
+        // unordered_map<int, int> mp;
+        // int n = nums.size();
+        // for(int num : nums){
+        //     mp[num]++;
+        //     if(mp[num] > n/2){
+        //         return num;
+        //     }
+        // }return -1;
+        
+    }
+};
