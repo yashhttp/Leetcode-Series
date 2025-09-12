@@ -154,3 +154,27 @@ Idea:
 -- Start from the end of both arrays.
 -- Place the largest element at the back of nums1 (since nums1 has extra space).
 -- Move pointers accordingly.
+
+
+//LEETCODE QUESTION - SQUARES OF A SORTED ARRAY
+    class Solution {
+public:
+    vector<int> sortedSquares(vector<int>& nums) {
+
+        int n =nums.size();
+        vector<int> res(n); 
+        
+        int pos = n-1, right =n-1, left =0;
+        while(left <= right){
+            if(abs(nums[left]) > abs(nums[right])){
+                res[pos] = nums[left] * nums[left];
+                left++;
+            }else{
+                res[pos] = nums[right] * nums[right];
+                right--;
+            }
+            pos--;
+
+        }return res;
+    }
+};
