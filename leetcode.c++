@@ -206,3 +206,35 @@ public:
 auto init_atexit = atexit([](){
     ofstream("display_runtime.txt") << "1";
 });
+
+
+// LEETCODE QUESTION - INSERT INTERVAL PROBLEM
+class Solution {
+public:
+    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
+        vector<vector<int>> result;
+        int i = 0, n = intervals.size();
+
+        // Step 1: add all before newInterval
+        while (i < n && intervals[i][1] < newInterval[0]) {
+            result.push_back(intervals[i]);
+            i++;
+        }
+
+        // Step 2: merge overlap
+        while (i < n && intervals[i][0] <= newInterval[1]) {
+            newInterval[0] = min(newInterval[0], intervals[i][0]);
+            newInterval[1] = max(newInterval[1], intervals[i][1]);
+            i++;
+        }
+        result.push_back(newInterval);
+
+        // Step 3: add remaining
+        while (i < n) {
+            result.push_back(intervals[i]);
+            i++;
+        }
+
+        return result;
+    }
+};
